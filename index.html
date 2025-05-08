@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Manajemen Kurikulum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <div class="min-h-screen flex flex-col md:flex-row">
+    <!-- Sidebar Navigation -->
+    <aside class="w-full md:w-64 bg-blue-800 text-white">
+      <div class="p-4 text-center">
+        <h1 class="text-xl font-bold">SIKULUM</h1>
+        <p class="text-sm">Sistem Kurikulum</p>
+      </div>
+      <nav class="mt-6">
+        <div class="px-4 py-3 bg-blue-900 flex items-center">
+          <i class="fas fa-tachometer-alt mr-3"></i>
+          <span>Dashboard</span>
+        </div>
+        <a href="#" class="px-4 py-3 hover:bg-blue-700 flex items-center block">
+          <i class="fas fa-user-graduate mr-3"></i>
+          <span>Profil Lulusan</span>
+        </a>
+        <a href="#" class="px-4 py-3 hover:bg-blue-700 flex items-center block">
+          <i class="fas fa-graduation-cap mr-3"></i>
+          <span>CPL</span>
+        </a>
+        <a href="#" class="px-4 py-3 hover:bg-blue-700 flex items-center block">
+          <i class="fas fa-book mr-3"></i>
+          <span>Bahan Kajian</span>
+        </a>
+        <a href="#" class="px-4 py-3 hover:bg-blue-700 flex items-center block">
+          <i class="fas fa-book-open mr-3"></i>
+          <span>Mata Kuliah</span>
+        </a>
+        <a href="#" class="px-4 py-3 hover:bg-blue-700 flex items-center block">
+          <i class="fas fa-tasks mr-3"></i>
+          <span>CPMK & SubCPMK</span>
+        </a>
+        <a href="#" class="px-4 py-3 hover:bg-blue-700 flex items-center block">
+          <i class="fas fa-clipboard-check mr-3"></i>
+          <span>Evaluasi</span>
+        </a>
+        <a href="#" class="px-4 py-3 hover:bg-blue-700 flex items-center block">
+          <i class="fas fa-exchange-alt mr-3"></i>
+          <span>MBKM</span>
+        </a>
+        <a href="#" class="px-4 py-3 hover:bg-blue-700 flex items-center block">
+          <i class="fas fa-chalkboard-teacher mr-3"></i>
+          <span>Dosen</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+      <!-- Top Header -->
+      <header class="bg-white shadow">
+        <div class="flex justify-between items-center p-4">
+          <h2 class="text-xl font-semibold">Dashboard Kurikulum</h2>
+          <div class="flex items-center space-x-4">
+            <button class="relative p-1">
+              <i class="fas fa-bell text-gray-600"></i>
+              <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">2</span>
+            </button>
+            <div class="flex items-center">
+              <span class="mr-2 text-sm hidden md:block">Admin User</span>
+              <i class="fas fa-user-circle text-2xl text-gray-600"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="p-6">
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+          <div class="bg-white rounded-md shadow p-4">
+            <div class="flex items-center">
+              <div class="rounded-full bg-blue-100 p-3">
+                <i class="fas fa-user-graduate text-blue-600"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-gray-500 text-sm">Profil Lulusan</h3>
+                <p class="text-2xl font-bold">1</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-md shadow p-4">
+            <div class="flex items-center">
+              <div class="rounded-full bg-green-100 p-3">
+                <i class="fas fa-graduation-cap text-green-600"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-gray-500 text-sm">CPL</h3>
+                <p class="text-2xl font-bold">2</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-md shadow p-4">
+            <div class="flex items-center">
+              <div class="rounded-full bg-purple-100 p-3">
+                <i class="fas fa-book text-purple-600"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-gray-500 text-sm">Mata Kuliah</h3>
+                <p class="text-2xl font-bold">1</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-md shadow p-4">
+            <div class="flex items-center">
+              <div class="rounded-full bg-orange-100 p-3">
+                <i class="fas fa-chalkboard-teacher text-orange-600"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-gray-500 text-sm">Dosen</h3>
+                <p class="text-2xl font-bold">1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profil Lulusan Section -->
+        <div class="bg-white rounded-md shadow mb-6">
+          <div class="border-b border-gray-200 p-4 flex justify-between items-center">
+            <h3 class="font-semibold text-lg">Profil Lulusan</h3>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm">
+              <i class="fas fa-plus mr-1"></i> Tambah
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="bg-gray-50 p-4 rounded-md mb-2">
+              <div class="flex justify-between">
+                <div>
+                  <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">PL1</span>
+                  <p class="mt-2">Mampu menerapkan ilmu komputer dalam pengembangan perangkat lunak</p>
+                </div>
+                <div>
+                  <button class="text-blue-600 hover:text-blue-800 mr-2">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="text-red-600 hover:text-red-800">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CPL Section -->
+        <div class="bg-white rounded-md shadow mb-6">
+          <div class="border-b border-gray-200 p-4 flex justify-between items-center">
+            <h3 class="font-semibold text-lg">Capaian Pembelajaran Lulusan (CPL)</h3>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm">
+              <i class="fas fa-plus mr-1"></i> Tambah
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="bg-gray-50 p-4 rounded-md mb-2">
+              <div class="flex justify-between">
+                <div>
+                  <div class="flex items-center">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">CPL1</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded ml-2">Prodi</span>
+                  </div>
+                  <p class="mt-2">Menguasai dasar-dasar algoritma dan pemrograman</p>
+                </div>
+                <div>
+                  <button class="text-blue-600 hover:text-blue-800 mr-2">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="text-red-600 hover:text-red-800">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-md mb-2">
+              <div class="flex justify-between">
+                <div>
+                  <div class="flex items-center">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">CPL2</span>
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded ml-2">SNDikti</span>
+                  </div>
+                  <p class="mt-2">Bertakwa kepada Tuhan YME</p>
+                </div>
+                <div>
+                  <button class="text-blue-600 hover:text-blue-800 mr-2">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="text-red-600 hover:text-red-800">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mata Kuliah Section -->
+        <div class="bg-white rounded-md shadow mb-6">
+          <div class="border-b border-gray-200 p-4 flex justify-between items-center">
+            <h3 class="font-semibold text-lg">Mata Kuliah</h3>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm">
+              <i class="fas fa-plus mr-1"></i> Tambah
+            </button>
+          </div>
+          <div class="p-4 overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kode</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nama</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">SKS</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Semester</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Dosen</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Aksi</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">IF101</td>
+                  <td class="px-6 py-4 whitespace-nowrap">Algoritma dan Pemrograman</td>
+                  <td class="px-6 py-4 whitespace-nowrap">3</td>
+                  <td class="px-6 py-4 whitespace-nowrap">1</td>
+                  <td class="px-6 py-4 whitespace-nowrap">Dr. Rina Kartini</td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <button class="text-blue-600 hover:text-blue-800 mr-2">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="text-red-600 hover:text-red-800">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- CPMK Section -->
+        <div class="bg-white rounded-md shadow mb-6">
+          <div class="border-b border-gray-200 p-4 flex justify-between items-center">
+            <h3 class="font-semibold text-lg">CPMK dan Sub-CPMK</h3>
+            <div class="space-x-2">
+              <button class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-md text-sm">
+                <i class="fas fa-plus mr-1"></i> CPMK
+              </button>
+              <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-md text-sm">
+                <i class="fas fa-plus mr-1"></i> Sub-CPMK
+              </button>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="mb-4">
+              <div class="bg-gray-50 p-4 rounded-md">
+                <div class="flex justify-between items-start mb-2">
+                  <div>
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">CPMK1</span>
+                    <span class="ml-2">Mampu membuat algoritma sederhana</span>
+                  </div>
+                  <div>
+                    <button class="text-blue-600 hover:text-blue-800 mr-2">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="text-red-600 hover:text-red-800">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                <!-- Sub CPMK -->
+                <div class="ml-6 pl-4 border-l-2 border-gray-300 mt-3">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded">SCPMK1</span>
+                      <span class="ml-2">Menulis pseudocode dari algoritma</span>
+                    </div>
+                    <div>
+                      <button class="text-blue-600 hover:text-blue-800 mr-2">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="text-red-600 hover:text-red-800">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bahan Kajian Section -->
+        <div class="bg-white rounded-md shadow mb-6">
+          <div class="border-b border-gray-200 p-4 flex justify-between items-center">
+            <h3 class="font-semibold text-lg">Bahan Kajian</h3>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm">
+              <i class="fas fa-plus mr-1"></i> Tambah
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="bg-gray-50 p-4 rounded-md mb-2">
+              <div class="flex justify-between">
+                <div>
+                  <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">BK1</span>
+                  <span class="font-medium ml-2">Algoritma</span>
+                  <p class="mt-2 text-gray-600">Pembahasan tentang dasar-dasar algoritma</p>
+                </div>
+                <div>
+                  <button class="text-blue-600 hover:text-blue-800 mr-2">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="text-red-600 hover:text-red-800">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-8 pb-6">
+          &copy; 2025 Sistem Manajemen Kurikulum - Semua Hak Dilindungi
+        </footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
